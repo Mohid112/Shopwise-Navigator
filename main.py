@@ -28,6 +28,10 @@ with app.app_context():
 
 products, similarity, collaborative_similarity = load_products()
 
+@app.route('/')
+def home():
+    return "ShopWise Navigator Backend is running!"
+
 
 @app.route('/submit_rating', methods=['POST'])
 def submit_rating():
